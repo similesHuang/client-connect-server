@@ -1,0 +1,25 @@
+{
+  "name": "mcp-client-connect-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "smileHuang",
+  "license": "ISC",
+  "description": "连接MCP服务端的示例代码",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.51.0",
+    "@modelcontextprotocol/sdk": "^1.11.4",
+    "dotenv": "^16.5.0"
+  },
+   "scripts": {
+    "build": "tsc && chmod 755 build/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.18",
+    "typescript": "^5.8.3"
+  }
+}
