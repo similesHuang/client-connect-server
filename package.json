@@ -2,13 +2,13 @@
   "name": "client-connect-server",
   "version": "1.0.0",
   "main": "index.js",
-  "keywords": [],
+  "keywords": ["mcp","mcp-client"],
   "author": "smileHuang",
   "license": "ISC",
   "description": "连接MCP服务端的示例代码",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/similesHuang/client-connect-server"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.51.0",
