@@ -1,11 +1,16 @@
 {
   "name": "client-connect-server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "keywords": ["mcp","mcp-client"],
   "author": "smileHuang",
   "license": "ISC",
   "description": "连接MCP服务端的示例代码",
+  "files": [
+  "dist",
+  "README.md"
+],
   "repository": {
     "type": "git",
     "url": "https://github.com/similesHuang/client-connect-server"
@@ -16,7 +21,7 @@
     "dotenv": "^16.5.0"
   },
    "scripts": {
-    "build": "tsc && chmod 755 build/index.js"
+    "build": "tsc && chmod 755 dist/index.js"
   },
   "devDependencies": {
     "@types/node": "^22.15.18",
