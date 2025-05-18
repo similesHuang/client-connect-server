@@ -3,7 +3,7 @@ import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js"
 import {SSEClientTransport} from "@modelcontextprotocol/sdk/client/sse.js";
 import {StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
 
-export const stdioConnectServer = async(serverPath: string) => {
+ const stdioConnectServer = async(serverPath: string) => {
     
     try {
         // 验证文件类型
@@ -39,7 +39,7 @@ export const stdioConnectServer = async(serverPath: string) => {
     }
 }
 
-export const sseConnectServer = async(url: string) => {
+ const sseConnectServer = async(url: string) => {
     try {
         const baseUrl = new URL(url);
         const transport = new SSEClientTransport(baseUrl);
@@ -55,7 +55,7 @@ export const sseConnectServer = async(url: string) => {
         throw new Error(`SSE连接mcp-server失败: ${error}`);
     }
 }
-export const streamableHttpConnectServer = async(url: string) => {
+ const streamableHttpConnectServer = async(url: string) => {
     try{
          const baseUrl = new URL(url);
          const transport = new StreamableHTTPClientTransport(baseUrl);
@@ -74,4 +74,9 @@ export const streamableHttpConnectServer = async(url: string) => {
             throw new Error(`连接mcp-server失败: ${error}`);
         }
     }
+}
+export default {
+    stdioConnectServer,
+    sseConnectServer,
+    streamableHttpConnectServer
 }
